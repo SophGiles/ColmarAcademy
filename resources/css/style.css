@@ -149,13 +149,13 @@ nav a {
 }
 
 .top-row {
-  max-width: 100%;
+  width: 100%;
   margin: 0 72px;
 }
 
 .box {
   padding: 16px 16px;
-  max-width: 30%;
+  width: 30%;
   display: inline-flex;
   flex-direction: column;
   background-color: white;
@@ -164,7 +164,7 @@ nav a {
 }
 
 .bottom-row {
-  max-width: 100%;
+  width: 100%;
   margin: 0 72px;
 }
 
@@ -293,7 +293,7 @@ footer a {
 
   .row {
     display: flex;
-    max-width: 480px;
+    max-width: 100%;
     flex-direction: column;
   }
 
@@ -321,7 +321,7 @@ footer a {
   .box {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    width: 100%;
     width: 90%;
     align-items: center;
     padding: 0;
