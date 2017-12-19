@@ -16,9 +16,42 @@ h3 {
   padding: 16px 8px 24px 0px;
 }
 
+h5 {
+  padding: 16px 0;
+}
+
 a {
   color: #00008b;
   text-decoration: none;
+}
+
+/* Applicable to Banner, Practice, Thesis */
+.column-1 {
+  display: inline-flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 24px;
+}
+
+.column-1 img {
+  width: 100%;
+}
+
+.column-2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  padding: 24px;
+}
+
+.column-2 img {
+  height: auto;
+  width: 35%;
+  flex-grow: 0.35;
+  max-height: 200px;
+  padding: 16px;
 }
 
 /* Header */
@@ -68,56 +101,35 @@ nav a {
 
 /* Banner */
 .banner {
+  position: relative;
+  top: 64px;
+  margin-bottom: 64px;
   display: flex;
-  width: 100%;
   flex-direction: row;
 }
 
 .banner img {
-  width: 60%;
-  max-height: 550px;
-  margin: 32px 24px;
+  max-width: 100%;
 }
 
-.banner-text {
-  display: flex;
-  flex-direction: column;
+.banner h1 {
   align-items: center;
+  text-align: center;
   justify-content: center;
 }
 
 /* Practice */
 .practice {
+  background-color: white;
   display: flex;
   width: 100%;
 }
 
-.column-1 {
-  display: inline-flex;
-  flex-direction: column;
-  width: 60%;
-}
-
-.column-1 img {
-  height: auto;
-  margin: 32px 24px;
-}
-
-.column-2 {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-}
-
-.column-2 img {
-  width: 35%;
-  height: auto;
-}
+/* See column section above ^^^ */
 
 .row {
   display: inline-flex;
   border-bottom: 3px solid black;
-  overflow: hidden;
 }
 
 .row img {
@@ -133,11 +145,16 @@ nav a {
   padding-left: 16px;
 }
 
+.row-text span {
+  padding-top: 16px;
+}
+
 /* Start */
 .start {
   display: inline-flex;
-  flex-flow: wrap;
+  box-sizing: border-box;
   width: 100%;
+  flex-flow: wrap;
   flex-direction: column;
   align-items: center;
   padding-left: 72px;
@@ -150,22 +167,21 @@ nav a {
 
 .top-row {
   width: 100%;
-  margin: 0 72px;
+  margin: 0 32px;
 }
 
 .box {
-  padding: 16px 16px;
+  padding: 16px;
   width: 30%;
   display: inline-flex;
   flex-direction: column;
   background-color: white;
   margin-bottom: 32px;
-  padding-bottom: 24px;
 }
 
 .bottom-row {
   width: 100%;
-  margin: 0 72px;
+  margin: 0 32px;
 }
 
 /* Thesis */
@@ -180,30 +196,10 @@ nav a {
   align-items: center;
 }
 
-.column-1 {
-  display: inline-flex;
-  flex-direction: column;
-  width: 60%;
-  margin: 24px;
-}
+/* See column section above ^^^ */
 
 .column-1 video {
   max-height: 400px;
-}
-
-.column-2 {
-  display: inline-flex;
-  flex-direction: column;
-  width: 40%;
-  margin: 24px;
-}
-
-.column-2 img {
-  height: auto;
-  width: 35%;
-  flex-grow: 0.35;
-  max-height: 200px;
-  padding: 16px;
 }
 
 .row-text {
@@ -257,6 +253,33 @@ footer a {
     padding: 0;
   }
 
+  .column-1 {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .column-1 img {
+    width: 100%;
+  }
+
+  .column-2 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column-2 img {
+    width: 90%;
+    padding: 0;
+    margin: 16px;
+    height: auto;
+  }
+
   header .logo, header nav {
     display: none;
   }
@@ -278,12 +301,11 @@ footer a {
     display: flex;
     width: 100%;
     flex-direction: column;
+    text-align: center;
   }
 
-  .banner img {
-    width: 100%;
-    height: auto;
-    margin: 0;
+  .banner a {
+    padding-bottom: 32px;
   }
 
 /* MQ Practice */
@@ -297,20 +319,28 @@ footer a {
     flex-direction: column;
   }
 
+  .row-text {
+    padding-left: 32px;
+    padding-bottom: 32px;
+  }
+
 /* MQ Start */
-  .top-row {
-    display: flex;
+  .start {
     width: 100%;
-    flex-direction: column;
     align-items: center;
+    padding: 16px;
+    margin: 0;
+  }
+
+  .top-row {
+    width: 100%;
     padding: 0;
+    margin: 0;
+    align-items: center;
   }
 
   .bottom-row {
-    display: flex;
     width: 100%;
-    flex-direction: column;
-    align-items: center;
     padding: 0;
   }
 
@@ -319,13 +349,10 @@ footer a {
   }
 
   .box {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    width: 90%;
     align-items: center;
     padding: 0;
-    margin: 2px;
+    margin-bottom: 8px;
   }
 
 /* MQ Thesis */
@@ -333,7 +360,7 @@ footer a {
     display: none;
   }
 
-  .thesis .column-1 {
+  .thesis video {
     width: 100%;
     margin: 0;
     padding-bottom: 24px;
