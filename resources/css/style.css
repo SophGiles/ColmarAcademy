@@ -5,24 +5,32 @@ body {
 
 h1 {
   padding: 32px 0px;
+  font-size: 2.25rem;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 2.0rem;
   color: #ccccff;
 }
 
 h3 {
   padding: 16px 8px 24px 0px;
+  font-size: 1.5rem;
 }
 
 h5 {
   padding: 16px 0;
+  font-size: 0.75rem;
+  color: #ccccff;
 }
 
 a {
   color: #00008b;
   text-decoration: none;
+}
+
+p {
+  padding: 8px 0;
 }
 
 /* Applicable to Banner, Practice, Thesis */
@@ -65,6 +73,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 3px solid #ccccff;
 }
 
 .logo {
@@ -99,6 +108,16 @@ nav a {
   justify-content: flex-end;
 }
 
+.button2 {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.button2:hover {
+  border: 2px solid #ccccff;
+  padding: 8px;
+}
+
 /* Banner */
 .banner {
   position: relative;
@@ -118,6 +137,26 @@ nav a {
   justify-content: center;
 }
 
+.banner h3 {
+  text-align: center;
+}
+
+.button {
+  background-color: #ccccff;
+  padding: 15px;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 24px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #00008b;
+  color: #ccccff;
+}
+
 /* Practice */
 .practice {
   background-color: white;
@@ -129,7 +168,7 @@ nav a {
 
 .row {
   display: inline-flex;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #ccccff;
 }
 
 .row img {
@@ -145,8 +184,8 @@ nav a {
   padding-left: 16px;
 }
 
-.row-text span {
-  padding-top: 16px;
+.row-text a {
+  margin-top: 16px;
 }
 
 /* Start */
@@ -170,18 +209,18 @@ nav a {
   margin: 0 32px;
 }
 
+.bottom-row {
+  width: 100%;
+  margin: 0 32px;
+}
+
 .box {
-  padding: 16px;
+  padding: 24px 16px;
   width: 30%;
   display: inline-flex;
   flex-direction: column;
   background-color: white;
   margin-bottom: 32px;
-}
-
-.bottom-row {
-  width: 100%;
-  margin: 0 32px;
 }
 
 /* Thesis */
@@ -215,7 +254,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 16px 24px;
-  border-top: 2px solid black;
+  border-top: 3px solid #ccccff;
   background-color: white;
   align-items: center;
 }
@@ -243,6 +282,18 @@ footer a {
 }
 
 @media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 0.75rem;
+  }
+
   .desktop {
     display: none;
   }
@@ -306,6 +357,15 @@ footer a {
 
   .banner a {
     padding-bottom: 32px;
+  }
+
+  .button {
+    background-color: #ccccff;
+    padding: 24px;
+    width: 80%;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
   }
 
 /* MQ Practice */
@@ -373,7 +433,7 @@ footer a {
   /* MQ Footer */
   footer {
     padding: 16px 0;
-    border-top: 2px solid black;
+    border-top: 2px solid #ccccff;
     background-color: white;
     align-items: center;
     justify-content: center;
